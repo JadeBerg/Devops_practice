@@ -46,19 +46,47 @@ addressing.
 
 - delete the previously created subdirectory with the file requesting removal;
 - delete the file copied to the home directory.
+
+![5_5](https://user-images.githubusercontent.com/67110882/147105875-702a875c-0165-45de-b554-f72a8c0c7024.png)
+
+
 6) Perform the following sequence of operations:
 - create a subdirectory test in the home directory;
 
+![6_1](https://user-images.githubusercontent.com/67110882/147105896-b9be0043-5248-4ce8-90eb-9cb824a92239.png)
+
 - copy the .bash_history file to this directory while changing its name to
 labwork2;
+
+![6_2](https://user-images.githubusercontent.com/67110882/147105937-bb77597e-60fb-4599-8542-717576dda4aa.png)
+
 - create a hard and soft link to the labwork2 file in the test subdirectory;
+
+![6_3](https://user-images.githubusercontent.com/67110882/147105969-ab84812a-6fb1-426a-a2e2-2e02276826aa.png)
+
 - how to define soft and hard link, what do these
 concepts;
+
+When you delete a referenced file, the symbolic link stops working and the hard link works. 
+Because the symbolic link contains the path to the file and the hard link points to data that
+is stored somewhere on the hard drive under a certain number.
+
 - change the data by opening a symbolic link. What changes will happen and
 why
+
+![6_6](https://user-images.githubusercontent.com/67110882/147106125-58981ab6-4f22-4c39-918d-804cd3ea16e8.png)
+![6_4](https://user-images.githubusercontent.com/67110882/147106091-28cd1170-97e7-4336-b321-3f7eaf83723b.png)
+![6_5](https://user-images.githubusercontent.com/67110882/147106112-756e5746-60e1-4ea9-b381-a6b854b39cb1.png)
+
 - rename the hard link file to hard_lnk_labwork2;
 - rename the soft link file to symb_lnk_labwork2 file;
+
+![6_7](https://user-images.githubusercontent.com/67110882/147106162-ad0e93a3-6783-41d6-874b-3336d32ca178.png)
+
 - then delete the labwork2. What changes have occurred and why?
+
+![6_8](https://user-images.githubusercontent.com/67110882/147106178-752b2a77-18fb-4383-a5f9-68a9b2a3982b.png)
+
 7) Using the locate utility, find all files that contain the squid and traceroute
 sequence.
 8) Determine which partitions are mounted in the system, as well as the types of
