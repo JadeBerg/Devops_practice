@@ -12,12 +12,15 @@ function target {
   sudo netstat -tulpn | grep LISTEN
 }
 
-if [ "$1" == '--all' ]
+if [ $# -eq 0 ]
 then
-  all
+  help
 elif [ "$1" == '--target' ]
 then
   target
+elif [ "$1" == '--all' ]
+then
+  all
 else
-  help
+  echo 'Please, start script without pararmeters! You will get info about script.'
 fi
