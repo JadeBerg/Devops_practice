@@ -1,4 +1,6 @@
 # Docker
 
-![image](https://user-images.githubusercontent.com/67110882/148710727-ba8d0cd6-010c-46b3-a9ea-178497fcb380.png)
+This directory for tasks about Docker.
+
+![image](https://user-images.githubusercontent.com/67110882/148710761-537932da-2aff-4e90-9c98-51dbc3cf1ab9.png)
 
