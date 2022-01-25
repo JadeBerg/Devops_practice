@@ -6,6 +6,10 @@ This example created for learning modules and variables with outputs
 
 ### Main file :
 ```
+provider "aws" {
+    region = "eu-central-1"
+}
+
 module "vpc" {
     source = "./modules/vpc"
 }
