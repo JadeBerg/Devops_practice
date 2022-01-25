@@ -1,5 +1,7 @@
 # Terraform Module Practice Example
 
+This example created for learning modules and variables with outputs
+
 ## This example create :
 
 ### 1) One VPC:
