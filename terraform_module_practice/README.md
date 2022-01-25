@@ -3,7 +3,7 @@
 This example create:
 
 1) One VPC:
-{
+```
     resource "aws_vpc" "my_vps" {
         cidr_block = var.cidr
         
@@ -11,12 +11,12 @@ This example create:
             Name = "${var.environment}-vpc"
         }
     }
-}
+```
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
 2) Three instances:
-{
+```
     data "aws_ami" "latest_amazon_linux" {
         owners = ["amazon"]
         most_recent = true
@@ -40,12 +40,12 @@ This example create:
             Name = "My Amazon Linux Server with Apache"
         }
     }
-}
+```
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
 3) Three public subnets: 
-{
+```
     data "aws_availability_zones" "availableAZ" {}
 
     resource "aws_subnet" "publicsubnet" {
@@ -96,12 +96,12 @@ This example create:
 
         depends_on = [aws_subnet.publicsubnet, aws_route_table.publicroutetable]
     }
-}
+```
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
 4) One security group:
-{
+```
     resource "aws_security_group" "SecurityGroup_EC2inPublicSubnet" {
         name = "Security Group for EC2 instances public subnets"
         vpc_id = var.vpc_id
@@ -127,12 +127,12 @@ This example create:
             Name = "${var.environment}-publicsubnetEC2-SG"
         }    
     }
-}
+```
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
 5) Apache server on instances with wimple web-page:
-{
+```
 #!/bin/bash
 yum -y update
 yum -y install httpd
@@ -140,6 +140,6 @@ myip=`curl http://169.254.169.254/latest/meta-data/local-ipv4`
 echo "<h2>WebServer with IP: $myip</h2><br>Build by Terraform! Using external sh"  >  /var/www/html/index.html
 sudo service httpd start
 chkconfig httpd on
-}
+```
 
 -----------------------------------------------------------------------------------------------------------------------------------
