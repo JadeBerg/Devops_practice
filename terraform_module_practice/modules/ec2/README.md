@@ -1,1 +1,1 @@
-## Module for security group
+## Module for creating ec2 instances

@@ -1,1 +1,1 @@
-## Main module
+## Terraform Module Practice Example
